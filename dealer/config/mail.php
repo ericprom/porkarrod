@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'admin@tentrot.com', 'name' => 'no-reply'],
+    'from' => ['address' => 'ask@porkarrod.com', 'name' => 'no-reply'],
 
     /*
     |--------------------------------------------------------------------------

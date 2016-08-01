@@ -56,6 +56,8 @@ class AccountController extends Controller
     }
     $user = Auth::user();
     $user->name = $data['name'];
+    $user->phone = @$data['phone'];
+    $user->line = @$data['line'];
     $user->save();
     return $user;
   }

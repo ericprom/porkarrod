@@ -23,4 +23,7 @@ class CarController extends Controller
   public function detail($id=null){
     return view('car.detail',array('id'=>$id));
   }
+  public function showroom($showroom){
+    return view('car.showroom',array('showroom'=>$showroom));
+  }
 }

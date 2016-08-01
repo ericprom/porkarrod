@@ -40,6 +40,7 @@ class CarController extends Controller
   public static function list_car($options = array()){
     $userID =Auth::id();
     $section = isset($options['section'])? $options['section'] : '';
+    $showroom = isset($options['showroom'])? $options['showroom'] : '';
     $skip = isset($options['skip'])? $options['skip'] : 0;
     $limit = isset($options['limit'])? $options['limit'] : 10;
     switch($section){
@@ -66,7 +67,7 @@ class CarController extends Controller
         $result['total'] = Cars::where('active', '=', '1')->where('owner','=',$userID)->count();
         return $result;
         break;
-      case "show":
+      case "display":
         $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
                 where('active','=','1')->
                 with('brand','model')->
@@ -83,6 +84,30 @@ class CarController extends Controller
         return $result;
         break;
 
+      case "showroom":
+        $result = array();
+        $owner = User::select('id','username')->where('username','=',$showroom)->first();
+        if($owner){
+          $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
+                  where('active','=','1')->
+                  where('owner','=',$owner->id)->
+                  with('brand','model')->
+                  orderBy('bought_at', 'desc')->
+                  skip($skip)->
+                  take($limit)->
+                  get();
+          foreach ($car as $ck => $val) {
+            $result['list'][$ck]['gallery'] = CarController::gallery_list($val->owner, $val->id);
+            $result['list'][$ck]['car'] = $val;
+          }
+          $result['total'] = Cars::where('active', '=', '1')->where('owner','=',$owner->id)->count();
+          $result['found'] = TRUE;
+        }
+        else{
+          $result['found'] = FALSE;
+        }
+        return $result;
+        break;
       case "recommend":
         $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
                 where('active','=','1')->
@@ -123,7 +148,7 @@ class CarController extends Controller
         $result = array();
         $result['gallery'] = CarController::gallery_list($car->owner, $car->id);
         $result['car'] = $car;
-        $result['owner'] = User::select('avatar','email','name')->
+        $result['owner'] = User::select('avatar','name','phone','line','email','username')->
                   where('id','=',$car->owner)->
                   first();
         return $result;

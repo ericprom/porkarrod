@@ -19,7 +19,6 @@
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('assets/css/nav.css') }}" rel="stylesheet" type="text/css" >
-
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-resource.js"></script>
     <script src="{{ asset('assets/angular/booter.js') }}"></script>
@@ -49,11 +48,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        @if (!Auth::guest())
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-search">
-          @if (!Auth::guest())
           <img src="{{ Auth::user()->avatar }}" class="avatar-logo img-thumbnail">
-          @endif
         </button>
+        @endif
         <a class="navbar-brand" href="{{ url('/') }}">
           <span style="font-size:26px;">
           PORKAR<span style="font-weight:900;">ROD</span>
@@ -69,19 +68,21 @@
           <li {{{ (Request::is('showroom') ? 'class=active' : '') }}}>
           </li>
           @endif
+
           @if (Auth::guest())
           <li><a href="{{ url('/login') }}">Login</a></li>
           <li><a href="{{ url('/register') }}">Register</a></li>
           @else
-          <li class="dropdown hidden-xs">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative;">
-          <img src="{{ Auth::user()->avatar }}"  class="avatar-logo img-thumbnail">
-          </a>
 
-          <ul class="dropdown-menu" role="menu">
-          <li><a href="{{ url('/account/dashboard') }}"><i class="fa fa-btn fa-user"></i>My Account</a></li>
-          <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-          </ul>
+          <li class="dropdown hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative;">
+            <img src="{{ Auth::user()->avatar }}"  class="avatar-logo img-thumbnail">
+            </a>
+
+            <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ url('/account/dashboard') }}"><i class="fa fa-btn fa-user"></i>My Account</a></li>
+            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+            </ul>
           </li>
           @endif
         </ul>

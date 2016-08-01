@@ -9,10 +9,18 @@
         <div class="ribbon-wrapper" ng-show="Detail.car.sold==1"><div class="ribbon-red">SOLD</div></div>
         <h3>@{{Detail.car.title}}</h3>
         <h4>
-          <span class="label label-default">Brand: @{{Detail.car.brand.title}}</span>
-          <span class="label label-default">Model: @{{Detail.car.model.title}}</span>
-          <span class="label label-default">Year: @{{Detail.car.year}}</span>
-          <span class="label label-info">Price: @{{Detail.car.price | number}}</span>
+          <span class="label label-default" style="display:inline-block">
+            Brand: @{{Detail.car.brand.title}}
+          </span>
+          <span class="label label-default" style="display:inline-block">
+            Model: @{{Detail.car.model.title}}
+          </span>
+          <span class="label label-default" style="display:inline-block">
+            Year: @{{Detail.car.year}}
+          </span>
+          <span class="label label-info" style="display:inline-block">
+            Price: @{{Detail.car.price | number}}
+          </span>
         </h4>
         <p class="car-detail">
           @{{Detail.car.detail}}
@@ -23,13 +31,45 @@
       </div>
     </div>
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="white-bg-container">
+      <div class="owner-contact-box">
         <table>
           <tr>
-            <td width="50">
-              <img ng-src="@{{Detail.owner.avatar}}" class="avatar img-circle img-thumbnail" alt="avatar" style="width:40px;height:40px;">
+            <td width="50" height="50">
+              <a href="{{ url('/') }}/@@{{Detail.owner.username}}">
+                <img ng-src="@{{Detail.owner.avatar}}" class="avatar img-circle img-thumbnail" alt="@{{Detail.owner.name}}" style="width:40px;height:40px;">
+              </a>
             </td>
-            <td><span class="detail-owner-name">@{{Detail.owner.name}}</span></td>
+            <td>
+              <span class="detail-owner-name">
+                <a href="{{ url('/') }}/@@{{Detail.owner.username}}">
+                  @{{Detail.owner.name}}
+                </a>
+              </span>
+              <br>
+              <span class="detail-owner-username" ng-show="Detail.owner.username">
+                <a href="{{ url('/') }}/@@{{Detail.owner.username}}">@@{{Detail.owner.username}}</a>
+              </span>
+            </td>
+          </tr>
+          <tr ng-show="Detail.owner.phone">
+            <td width="50" height="50">
+              <img src="http://porkarrod.com/images/icons/phone.png" width="40">
+            </td>
+            <td>
+              <span class="detail-owner-name">
+                <a href="tel:@{{Detail.owner.phone}}">@{{Detail.owner.phone}}</a>
+              </span>
+            </td>
+          </tr>
+          <tr ng-show="Detail.owner.line">
+            <td width="50" height="50">
+              <img src="http://porkarrod.com/images/icons/line.png" width="40">
+            </td>
+            <td>
+              <span class="detail-owner-name">
+                @{{Detail.owner.line}}
+              </span>
+            </td>
           </tr>
         </table>
         

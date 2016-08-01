@@ -224,19 +224,34 @@ textarea {
   white-space: -o-pre-wrap; /* newer Opera */
   white-space: pre-wrap; /* Chrome; W3C standard */
   word-wrap: break-word; /* IE */
+  white-space: pre-line;
 }
 .car-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
 }
 
 /* Side notes for detail
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
-.detail-owner-name {
-    color: #464646;
-    font-size: 18px
+
+.owner-contact-box{
+  background: #fff;
+  margin-top:30px;
+  padding: 10px;
+  height: 100%;
+}
+.detail-owner-name{
+  font-size: 18px;
+}
+.detail-owner-name a{
+  color: #464646;
+  text-decoration: none;
+}
+.detail-owner-username a{
+  color: #cccccc;
+  text-decoration: none;
 }
 /* Side notes for friend
 -------------------------------------------------- */

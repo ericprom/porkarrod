@@ -4,6 +4,7 @@
     $scope.Import = {}
     $scope.Brands = [];
     $scope.Models = [];
+    $scope.Partners = [];
     $scope.init = function(action){
       var criteria = {filter: {'section':'brands'}};
       API.Brand(criteria).then(function (result) {

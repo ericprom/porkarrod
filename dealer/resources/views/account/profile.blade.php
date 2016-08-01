@@ -28,6 +28,18 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label class="col-lg-3 control-label">เบอร์โทร:</label>
+                  <div class="col-lg-8">
+                    <input type="text" name="phone" class="form-control" ng-model="Profile.phone" ng-minlength="3">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">LINE id:</label>
+                  <div class="col-lg-8">
+                    <input type="text" name="line" class="form-control" ng-model="Profile.line" ng-minlength="3">
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="col-lg-3 control-label">อีเมล์:</label>
                   <div class="col-lg-8">
                     <input type="text" name="email" class="form-control" ng-model="Profile.email" disabled>

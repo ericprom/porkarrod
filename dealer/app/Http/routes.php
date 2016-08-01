@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/@{showroom}', 'Car\CarController@showroom');
 
 //Auth Route
 Route::auth();

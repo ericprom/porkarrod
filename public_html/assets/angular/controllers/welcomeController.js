@@ -13,7 +13,7 @@
       }
     });
 		$scope.feedItem = function(skip,limit){
-      API.Select({filter: {section:'show',skip:skip,limit:limit}}).then(function (result) {
+      API.Select({filter: {section:'display',skip:skip,limit:limit}}).then(function (result) {
         if(result.status){
           angular.forEach(result.data.list, function (element, index, array) {
               $scope.Cars.push(element);

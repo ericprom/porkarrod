@@ -77,7 +77,9 @@
                     <i class="fa fa-file-o check-report"  ng-click="checkReport(car)"></i>
                 </th> 
                 <td>
-                  <strong>@{{car.brand.title}} @{{car.model.title}} ปี @{{car.year}} สี @{{car.color}}</strong>
+                  <strong  ng-click="checkReport(car)" style="cursor:pointer;">
+                    @{{car.brand.title}} @{{car.model.title}} ปี @{{car.year}} สี @{{car.color}}
+                  </strong>
                   <span style="font-size: 18px">
                     <span class="label label-default">ซื้อ: @{{car.budget | number}}</span>
                     <span class="label label-success">ขาย: @{{car.cash | number}}</span>
@@ -86,6 +88,9 @@
                 <td class="text-right">@{{car.bought_at | dateonly}}</td> 
                 <td class="text-right">@{{car.sold_at | dateonly}}</td> 
               </tr> 
+              <tr ng-show="Car.sold.list<=0">
+                <td colspan="4"><center>ไม่มีรายงานการขายรถ</center></td>
+              </tr>
             </tbody> 
           </table>
           <div class="row" ng-show="Car.sold.total>Car.sold.list.length">

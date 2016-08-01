@@ -14,14 +14,11 @@
           <li role="presentation" class="active">
             <a href="#car" aria-controls="car" role="tab" data-toggle="tab"><i class="fa fa-edit"></i> แก้ไขข้อมูล</a>
           </li>
-          <li role="presentation">
+          <li role="presentation" ng-show="Partners>0">
             <a href="#investor" aria-controls="investor" role="tab" data-toggle="tab"><i class="fa fa-users"></i> เพิ่มหุ้นส่วน</a>
           </li>
         </ul>
       </div>
-      <!-- <div class="col-sm-2">
-        <a href="{{ url('/car') }}/@{{Import.id}}" class="pull-right"><i class="fa fa-file"></i> view</a>
-      </div> -->
     </div>
     <div class="tab-content">
       <div id="car" class="tab-pane active" style="margin-top:30px;">
@@ -179,6 +176,7 @@
         </form>
       </div>
       <div id="investor" class="tab-pane">
+      
       </div>
     </div>
   </div>
