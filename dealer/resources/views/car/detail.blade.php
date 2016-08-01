@@ -33,7 +33,7 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
       <div class="owner-contact-box">
         <table>
-          <tr>
+          <tr ng-show="Detail.owner.username">
             <td width="50" height="50">
               <a href="{{ url('/') }}/@@{{Detail.owner.username}}">
                 <img ng-src="@{{Detail.owner.avatar}}" class="avatar img-circle img-thumbnail" alt="@{{Detail.owner.name}}" style="width:40px;height:40px;">
@@ -46,8 +46,18 @@
                 </a>
               </span>
               <br>
-              <span class="detail-owner-username" ng-show="Detail.owner.username">
+              <span class="detail-owner-username">
                 <a href="{{ url('/') }}/@@{{Detail.owner.username}}">@@{{Detail.owner.username}}</a>
+              </span>
+            </td>
+          </tr>
+          <tr ng-hide="Detail.owner.username">
+            <td width="50" height="50">
+              <img ng-src="@{{Detail.owner.avatar}}" class="avatar img-circle img-thumbnail" alt="@{{Detail.owner.name}}" style="width:40px;height:40px;">
+            </td>
+            <td>
+              <span class="detail-owner-name">
+                @{{Detail.owner.name}}
               </span>
             </td>
           </tr>
@@ -72,8 +82,6 @@
             </td>
           </tr>
         </table>
-        
-        
       </div>
     </div>
   </div>
