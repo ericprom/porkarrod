@@ -1,0 +1,26 @@
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 0px 0 20px;
+    border-bottom: 1px solid #eee;
+    color: #595959 !important;
+}
+
+.control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: 300 !important;
+    color: #595959 !important;
+}
+hr {
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.img-thumbnail {
+    padding: 0; 
+    background-color: #fff;
+    border: 3px solid #FF5A5F;
+}
