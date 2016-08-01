@@ -6,9 +6,9 @@
   <div class="margin-top-30 margin-bottom-30 min-height-500">
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
-        <span class="topic-title">
-          FEATURED<span style="font-weight:900;">CAR</span>
-        </span>
+        <div class="topic-title">
+          <span  ng-show="Recommends.length>0">FEATURED<span style="font-weight:900;">CAR</span></span>
+        </div>
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="get in Recommends">
             <div class="ribbon-wrapper" ng-show="get.car.sold==1"><div class="ribbon-red">SOLD</div></div>

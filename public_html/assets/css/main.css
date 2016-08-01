@@ -31,6 +31,7 @@ textarea {
   font-weight: 300 !important;
   text-decoration: none;
   position: relative;
+  min-height: 37px;
 }
 
 /* Side notes for dropzone
