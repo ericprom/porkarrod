@@ -4,14 +4,14 @@
 <script src="{{ asset('assets/angular/controllers/showroomController.js') }}"></script>
 <div class="container" ng-controller="showroomController" ng-cloak>
   <div class="margin-top-30 margin-bottom-30 min-height-500">
-    <div class="row" ng-show="Found">
+    <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <span class="topic-title text-uppercase">
-          @{{showroom}}<span style="font-weight:900;">SHOP</span>
+          {{$showroom->username}}<span style="font-weight:900;">SHOP</span>
         </span>
       </div>
     </div>
-    <div class="row" ng-show="Found">
+    <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="shop in Shops">
         <div class="ribbon-wrapper" ng-show="shop.car.sold==1"><div class="ribbon-red">SOLD</div></div>
         <article class="shop-product">
@@ -52,7 +52,7 @@
 </div>
 <script>
   (function () {
-    window.showroom  = "{!! $showroom !!}";
+    window.showroom  = "{!! $showroom->id !!}";
   })();
 </script>
 @endsection

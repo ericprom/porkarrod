@@ -70,6 +70,7 @@ textarea {
   padding: 10px;
   min-height: 290px;
   height: 100%;
+  box-shadow: 1px 1px 1px #e4e4e4;
 }
 /* Side notes for calling out things
 -------------------------------------------------- */
@@ -164,7 +165,7 @@ textarea {
 .shop-product {
   background: #fff;
   margin-top:30px;
-  border: 1px solid #eee;
+  box-shadow: 1px 1px 1px #e4e4e4;
 }
 .shop-img {
   display: block;
@@ -213,9 +214,10 @@ textarea {
   height: 54px;
   padding: 10px;
 }
-/* Side notes for shop
+/* Side notes for detail
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
+
 .car-detail {
   color: #464646;
   font-size: 18px;
@@ -229,18 +231,15 @@ textarea {
 .car-image {
   width: 100%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 10px;
 }
-
-/* Side notes for detail
--------------------------------------------------- */
-/* Base styles (regardless of theme) */
 
 .owner-contact-box{
   background: #fff;
   margin-top:30px;
   padding: 10px;
   height: 100%;
+  box-shadow: 1px 1px 1px #e4e4e4;
 }
 .detail-owner-name{
   font-size: 18px;
@@ -251,6 +250,14 @@ textarea {
 }
 .detail-owner-username a{
   color: #cccccc;
+  text-decoration: none;
+}
+.detail-owner-contact{
+  font-size: 18px;
+  color: #12B2DC;
+}
+.detail-owner-contact a{
+  color: #12B2DC;
   text-decoration: none;
 }
 /* Side notes for friend

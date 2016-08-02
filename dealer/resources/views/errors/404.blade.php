@@ -35,12 +35,19 @@
                 font-size: 72px;
                 margin-bottom: 40px;
             }
+            .detail {
+                font-size: 50px;
+                margin-bottom: 40px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">404</div>
+                <div class="row">
+
+                    <div class="title">404</div>
+                    <div class="detail">Sorry, but nothing exists here.</div>
             </div>
         </div>
     </body>

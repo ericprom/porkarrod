@@ -66,7 +66,7 @@
               <img src="http://porkarrod.com/images/icons/phone.png" width="40">
             </td>
             <td>
-              <span class="detail-owner-name">
+              <span class="detail-owner-contact">
                 <a href="tel:@{{Detail.owner.phone}}">@{{Detail.owner.phone}}</a>
               </span>
             </td>
@@ -76,7 +76,7 @@
               <img src="http://porkarrod.com/images/icons/line.png" width="40">
             </td>
             <td>
-              <span class="detail-owner-name">
+              <span class="detail-owner-contact">
                 @{{Detail.owner.line}}
               </span>
             </td>

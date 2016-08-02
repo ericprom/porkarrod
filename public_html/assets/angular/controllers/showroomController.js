@@ -8,13 +8,12 @@
     $scope.Total = 0;
 		$scope.feedItem = function(skip,limit){
       API.Select({filter: {section:'showroom',showroom:$scope.showroom,skip:skip,limit:limit}}).then(function (result) {
-        if(result.status && result.data.found){
+        if(result.status){
           angular.forEach(result.data.list, function (element, index, array) {
               $scope.Shops.push(element);
           });
           $scope.Total = result.data.total;
         }
-        $scope.Found = result.data.found;
       });
     }
     $scope.feedItem(0,10);

@@ -86,26 +86,19 @@ class CarController extends Controller
 
       case "showroom":
         $result = array();
-        $owner = User::select('id','username')->where('username','=',$showroom)->first();
-        if($owner){
-          $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
-                  where('active','=','1')->
-                  where('owner','=',$owner->id)->
-                  with('brand','model')->
-                  orderBy('bought_at', 'desc')->
-                  skip($skip)->
-                  take($limit)->
-                  get();
-          foreach ($car as $ck => $val) {
-            $result['list'][$ck]['gallery'] = CarController::gallery_list($val->owner, $val->id);
-            $result['list'][$ck]['car'] = $val;
-          }
-          $result['total'] = Cars::where('active', '=', '1')->where('owner','=',$owner->id)->count();
-          $result['found'] = TRUE;
+        $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
+                where('active','=','1')->
+                where('owner','=',$showroom)->
+                with('brand','model')->
+                orderBy('bought_at', 'desc')->
+                skip($skip)->
+                take($limit)->
+                get();
+        foreach ($car as $ck => $val) {
+          $result['list'][$ck]['gallery'] = CarController::gallery_list($val->owner, $val->id);
+          $result['list'][$ck]['car'] = $val;
         }
-        else{
-          $result['found'] = FALSE;
-        }
+        $result['total'] = Cars::where('active', '=', '1')->where('owner','=',$showroom)->count();
         return $result;
         break;
       case "recommend":
