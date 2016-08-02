@@ -1,14 +1,14 @@
 (function () {
 	myApp.controllers.welcomeController = ['API','$scope','$http','toaster', function(API,$scope,$http,toaster) {
 		$scope.Cars = [];
-    $scope.Recommends = [];
+    $scope.Features = [];
     $scope.skip = 0;
     $scope.limit = 10;
     $scope.Total = 0;
-    API.Select({filter: {section:'recommend'}}).then(function (result) {
+    API.Select({filter: {section:'featured'}}).then(function (result) {
       if(result.status){
         angular.forEach(result.data.list, function (element, index, array) {
-            $scope.Recommends.push(element);
+            $scope.Features.push(element);
         });
       }
     });

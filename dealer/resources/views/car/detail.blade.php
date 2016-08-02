@@ -6,7 +6,7 @@
   <div class="row margin-bottom-50">
     <div class="col-md-9 col-sm-12 col-xs-12">
       <div class="detail-container" style="min-height:900px;">
-        <div class="ribbon-wrapper" ng-show="Detail.car.sold==1"><div class="ribbon-red">SOLD</div></div>
+        <div class="ribbon-wrapper" ng-show="Detail.car.sold==1"><div class="ribbon">SOLD</div></div>
         <h3>@{{Detail.car.title}}</h3>
         <h4>
           <span class="label label-default" style="display:inline-block">

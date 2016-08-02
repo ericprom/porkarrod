@@ -50,7 +50,7 @@ textarea {
 .dropzone-profile {
     min-height: 100px !important;
     border: #e4e4e4 1px dashed !important;
-    // border: none !important;
+    /*border: none !important;*/
     background: white;
     padding: 20px 20px;
 }
@@ -272,6 +272,9 @@ textarea {
 /* Base styles (regardless of theme) */
 @media (max-width: 767px) {
   .friend-name { text-align:center }
+  .margin-top-30-small{
+    margin-top: 30px;
+  }
 }
 .friend-block {
   background: #fff;
@@ -299,7 +302,7 @@ textarea {
     right: 15px;
 }
 
-.ribbon-red {
+.ribbon {
   font: bold 15px Sans-Serif;
   color: #333;
   text-align: center;
@@ -320,16 +323,16 @@ textarea {
   box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
 }
 
-.ribbon-red:before, .ribbon-red:after {
+.ribbon:before, .ribbon:after {
   content: "";
   border-top:   3px solid #FF5A5F;   
   position:absolute;
   bottom: -3px;
 }
 
-.ribbon-red:before {
+.ribbon:before {
   left: 0;
 }
-.ribbon-red:after {
+.ribbon:after {
   right: 0;
 }​

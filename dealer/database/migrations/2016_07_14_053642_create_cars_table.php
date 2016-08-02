@@ -33,7 +33,6 @@ class CreateCarsTable extends Migration
             $table->string('commission')->nullable();
             $table->date('sold_at')->nullable();
             $table->integer('active')->default(1);
-            $table->integer('recommended')->default(0);
             $table->timestamps();
         });
     }

@@ -7,11 +7,12 @@
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
         <div class="topic-title">
-          <span  ng-show="Recommends.length>0">FEATURED<span style="font-weight:900;">CAR</span></span>
+          <span  ng-show="Features.length>0">FEATURED<span style="font-weight:900;">CARS</span></span>
         </div>
         <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="get in Recommends">
-            <div class="ribbon-wrapper" ng-show="get.car.sold==1"><div class="ribbon-red">SOLD</div></div>
+          <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="get in Features">
+
+            <div class="ribbon-wrapper"><div class="ribbon" style="background-color: #F1C032 !important;">advertise</div></div>
             <article class="shop-product">
               <a href="{{ url('/car') }}/@{{get.car.id}}">
                 <figure class="shop-img" style="height:170px;background-image: url(@{{get.gallery[0]}});"></figure>
@@ -46,13 +47,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-sm-6 col-xs-12">
+      <div class="col-md-8 col-sm-6 col-xs-12 margin-top-30-small">
         <span class="topic-title">
           NEW<span style="font-weight:900;">CARS</span>
         </span>
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="get in Cars">
-            <div class="ribbon-wrapper" ng-show="get.car.sold==1"><div class="ribbon-red">SOLD</div></div>
+            <div class="ribbon-wrapper" ng-show="get.car.sold==1"><div class="ribbon">SOLD</div></div>
             <article class="shop-product">
               <a href="{{ url('/car') }}/@{{get.car.id}}">
                 <figure class="shop-img" style="height:170px;background-image: url(@{{get.gallery[0]}});"></figure>

@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="shop in Shops">
-        <div class="ribbon-wrapper" ng-show="shop.car.sold==1"><div class="ribbon-red">SOLD</div></div>
+        <div class="ribbon-wrapper" ng-show="shop.car.sold==1"><div class="ribbon">SOLD</div></div>
         <article class="shop-product">
           <a href="{{ url('/car') }}/@{{shop.car.id}}">
             <figure class="shop-img" style="height:170px;background-image: url(@{{shop.gallery[0]}});"></figure>

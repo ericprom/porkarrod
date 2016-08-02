@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Cars;
 use App\Models\User;
+use App\Models\Features;
 use Response;
 use Auth;
 use File;
@@ -102,20 +103,13 @@ class CarController extends Controller
         $result['total'] = Cars::where('active', '=', '1')->where('owner','=',$showroom)->count();
         return $result;
         break;
-      case "recommend":
-        $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
-                where('active','=','1')->
-                where('sold', '=', '0')->
-                where('recommended','=','1')->
-                with('brand','model')->
-                orderBy('bought_at', 'desc')->
-                get();
+      case "featured":
         $result = array();
-        foreach ($car as $ck => $val) {
-          $result['list'][$ck]['gallery'] = CarController::gallery_list($val->owner, $val->id);
-          $result['list'][$ck]['car'] = $val;
+        $feature =  Features::where('active','=','1')->with('car')->get();
+        foreach ($feature as $ck => $val) {
+          $result['list'][$ck]['gallery'] = CarController::gallery_list($val->car->owner, $val->car->id);
+          $result['list'][$ck]['car'] = $val->car;
         }
-        $result['total'] = Cars::where('active', '=', '1')->count();
         return $result;
         break;
       case "sold":
