@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <span class="topic-title text-uppercase">
-          {{$showroom->username}}<span style="font-weight:900;">SHOP</span>
+          {{$showroom->username}}<span style="font-weight:900;">SHOWROOM</span>
         </span>
       </div>
     </div>

@@ -33,7 +33,7 @@
     </div>
     <div class="col-md-9 col-sm-9 col-xs-12">
       <div class="white-bg-container">
-        <div style="min-height:590px;">
+        <div style="min-height:550px;">
           <h3>Reports</h3>
           <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -81,8 +81,8 @@
                     @{{car.brand.title}} @{{car.model.title}} ปี @{{car.year}} สี @{{car.color}}
                   </strong>
                   <span style="font-size: 18px">
-                    <span class="label label-default">ซื้อ: @{{car.budget | number}}</span>
-                    <span class="label label-success">ขาย: @{{car.cash | number}}</span>
+                    <span class="label label-default" style="display:inline-block">ซื้อ: @{{car.budget | number}}</span>
+                    <span class="label label-success" style="display:inline-block">ขาย: @{{car.cash | number}}</span>
                   </span>
                 </td> 
                 <td class="text-right">@{{car.bought_at | dateonly}}</td> 

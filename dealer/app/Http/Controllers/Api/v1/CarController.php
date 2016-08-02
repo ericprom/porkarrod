@@ -88,6 +88,7 @@ class CarController extends Controller
         $result = array();
         $car =  Cars::select('id','title','price','brand_id','model_id','commission','bought_at','owner','sold')->
                 where('active','=','1')->
+                where('sold','=','0')->
                 where('owner','=',$showroom)->
                 with('brand','model')->
                 orderBy('bought_at', 'desc')->
