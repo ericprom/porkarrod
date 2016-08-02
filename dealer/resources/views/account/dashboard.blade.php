@@ -95,7 +95,7 @@
           </table>
           <div class="row" ng-show="Car.sold.total>Car.sold.list.length">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="text-center"  ng-click="loadMore()" style="cursor:pointer;">Load more...</div>
+              <div class="text-center set-cursor-pointer"  ng-click="loadMore()">Load more...</div>
             </div>
           </div>
         </div>

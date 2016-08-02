@@ -217,7 +217,21 @@ textarea {
 /* Side notes for detail
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
-
+.detail-container{
+  background: #fff;
+  margin-top:30px;
+  padding: 10px 10px 0px 10px;
+  min-height: 290px;
+  height: 100%;
+  box-shadow: 1px 1px 1px #e4e4e4;
+}
+.detail-contact{
+  background: #fff;
+  margin-top:30px;
+  padding: 10px;
+  height: 100%;
+  box-shadow: 1px 1px 1px #e4e4e4;
+}
 .car-detail {
   color: #464646;
   font-size: 18px;
@@ -234,13 +248,6 @@ textarea {
   margin-top: 10px;
 }
 
-.owner-contact-box{
-  background: #fff;
-  margin-top:30px;
-  padding: 10px;
-  height: 100%;
-  box-shadow: 1px 1px 1px #e4e4e4;
-}
 .detail-owner-name{
   font-size: 18px;
 }

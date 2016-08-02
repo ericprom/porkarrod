@@ -5,7 +5,7 @@
 <div class="container" ng-controller="carDetailController" ng-cloak>
   <div class="row margin-bottom-50">
     <div class="col-md-9 col-sm-12 col-xs-12">
-      <div class="white-bg-container" style="min-height:900px;">
+      <div class="detail-container" style="min-height:900px;">
         <div class="ribbon-wrapper" ng-show="Detail.car.sold==1"><div class="ribbon-red">SOLD</div></div>
         <h3>@{{Detail.car.title}}</h3>
         <h4>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="owner-contact-box">
+      <div class="detail-contact" id="contact-box">
         <table>
           <tr ng-show="Detail.owner.username">
             <td width="50" height="50">
