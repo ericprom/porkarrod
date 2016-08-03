@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-sm-6 col-xs-12 margin-top-30-small">
+      <div class="col-md-8 col-sm-6 col-xs-12" ng-class="(Features.length>0)?'margin-top-30-small':'';">
         <span class="topic-title">
           NEW<span style="font-weight:900;">CARS</span>
         </span>

@@ -17,9 +17,6 @@ textarea {
 .min-height-500{
   min-height:500px;
 }
-.margin-top-30{
-  margin-top:30px;
-}
 .margin-bottom-30{
   margin-bottom:30px;
 }
@@ -33,7 +30,20 @@ textarea {
   position: relative;
   min-height: 37px;
 }
-
+/* Side notes for media query
+-------------------------------------------------- */
+/* Base styles (regardless of theme) */
+@media (max-width: 767px) {
+  .friend-name { text-align:center }
+  .margin-top-30-small{
+    margin-top: 30px;
+  }
+}
+@media (min-width: 767px) {
+  .margin-top-30{
+    margin-top:30px;
+  }
+}
 /* Side notes for dropzone
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
@@ -270,12 +280,6 @@ textarea {
 /* Side notes for friend
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
-@media (max-width: 767px) {
-  .friend-name { text-align:center }
-  .margin-top-30-small{
-    margin-top: 30px;
-  }
-}
 .friend-block {
   background: #fff;
   margin-top:30px;
@@ -301,7 +305,6 @@ textarea {
     top: 30px;
     right: 15px;
 }
-
 .ribbon {
   font: bold 15px Sans-Serif;
   color: #333;
@@ -322,14 +325,12 @@ textarea {
   -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
   box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
 }
-
 .ribbon:before, .ribbon:after {
   content: "";
   border-top:   3px solid #FF5A5F;   
   position:absolute;
   bottom: -3px;
 }
-
 .ribbon:before {
   left: 0;
 }
