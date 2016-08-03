@@ -32,7 +32,7 @@ class CarController extends Controller
     }
   }
   public function showroom($showroom){
-    $owner = User::select('id','username')->where('username','=',$showroom)->first();
+    $owner = User::select('id','avatar','username','name','phone','line')->where('username','=',$showroom)->first();
     if($owner){
       return view('car.showroom',array('showroom'=>$owner));
     }

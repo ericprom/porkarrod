@@ -169,6 +169,20 @@ textarea {
   margin-top: 8px;
   color: #FF5A5F;
 }
+/* Side notes for showroom
+-------------------------------------------------- */
+/* Base styles (regardless of theme) */
+.showroom-profile{
+  margin-top:45px;
+}
+.showroom-contact{
+  color: #12B2DC;
+  font-size: 18px;
+}
+.showroom-contact a{
+  text-decoration: none;
+  color: #12B2DC;
+}
 /* Side notes for shop
 -------------------------------------------------- */
 /* Base styles (regardless of theme) */
