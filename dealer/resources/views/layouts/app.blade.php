@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>พ่อค้ารถ | ขายตัดรถมือสอง</title>
+    <title>พ่อค้ารถ | เว็บไซต์ขายตัดรถมือสอง</title>
     <meta name="keywords" itemprop="keywords" content="ขายตัดรถบ้าน, รถมือสอง, รถบ้าน, ซื้อ ขาย รถมือสอง, ราคารถมือสอง" />
     <meta name="description" itemprop="description" content="พ่อค้ารถ เว็บไซต์ขายตัดรถบ้าน รถมือสอง หนึ่งเดียวในประเทศไทย ที่มาพร้อมระบบบริหารจัดการการขาย และรายงาน" />
 
@@ -18,17 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-    <!-- Custom -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" type="text/css" >
-    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" >
-    <link href="{{ asset('assets/css/nav.css') }}" rel="stylesheet" type="text/css" >
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-resource.js"></script>
-    <script src="{{ asset('assets/angular/booter.js') }}"></script>
-    
-    <script>
-      window.myApp = new AngularBooter('myApp');
-    </script>
     <style>
         body {
             font-family: 'Lato';
@@ -40,6 +29,24 @@
     </style>
 
     @include('includes._extra-css')
+
+    <!-- Custom -->
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('assets/css/nav.css') }}" rel="stylesheet" type="text/css" >
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-resource.js"></script>
+    <script src="{{ asset('assets/angular/booter.js') }}"></script>
+    
+    <script>
+      window.myApp = new AngularBooter('myApp');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-81853839-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 </head>
 <body id="app-layout">
   <nav class="navbar navbar-default navbar-static-top" role="navigation">

@@ -7,7 +7,9 @@
   		<img src="http://porkarrod.com/images/contact/messenger.png" height="36">
   	</a>
   	<br>
-  	<img src="http://porkarrod.com/images/contact/line.png" height="36">
+    <a href="http://line.me/ti/p/%40cxr4848b" target="_blank" style="text-decoration: none;">
+  	 <img src="http://porkarrod.com/images/contact/line.png" height="36">
+    </a>
  	<br>
   	<h4>หรือ <span style="color: #12B2DC;">ask@porkarrod.com</span></h4>
 </div>
