@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="detail-contact" id="contact-box">
+      <div class="detail-side-box">
         <table>
           <tr ng-show="Detail.owner.username">
             <td width="50" height="50">
@@ -78,6 +78,30 @@
             <td>
               <span class="detail-owner-contact">
                 @{{Detail.owner.line}}
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="detail-side-box">
+        <table>
+          <tr>
+            <td width="20" height="50" class="text-center">
+              <i class="fa fa-info"></i>
+            </td>
+            <td>
+              <span>
+                เลขที่ประกาศ: {{$id}}
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td width="20" height="50" class="text-center">
+              <i class="fa fa-calendar"></i>
+            </td>
+            <td>
+              <span>
+                วันที่ประกาศ: @{{Detail.car.created_at | dateonly}}
               </span>
             </td>
           </tr>

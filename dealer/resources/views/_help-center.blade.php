@@ -11,5 +11,5 @@
   	 <img src="http://porkarrod.com/images/contact/line.png" height="36">
     </a>
  	<br>
-  	<h4>หรือ <span style="color: #12B2DC;">ask@porkarrod.com</span></h4>
+  	<h4>หรือ <span style="color: #FF5A5F;">ask@porkarrod.com</span></h4>
 </div>

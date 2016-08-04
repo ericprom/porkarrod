@@ -10,7 +10,7 @@
           <div class="showroom-profile text-center">
             <img src="{{$showroom->avatar}}" class="avatar img-circle img-thumbnail" alt="{{$showroom->name}}" style="width:100px;height:100px;">
             <h3>{{$showroom->name}}</h3>
-            <h5>{{'@'.$showroom->username}}</h5>
+            <h5>{{'@'.$showroom->username.'\'s showroom'}}</h5>
           </div>
         </div>
         @if ($showroom->phone||$showroom->line)

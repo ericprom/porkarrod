@@ -128,7 +128,7 @@ class CarController extends Controller
         break;
       case "detail":
         $id = isset($options['id'])? $options['id'] : '';
-        $car =  Cars::select('id','title','detail','year','price','brand_id','model_id','sold','owner','bought_at')->
+        $car =  Cars::select('id','title','detail','year','price','brand_id','model_id','sold','owner','bought_at','created_at')->
                 where('id','=',$id)->
                 where('active','=','1')->
                 with('brand','model')->
