@@ -5,7 +5,7 @@
 <div class="container" ng-controller="welcomeController" ng-cloak>
   <div class="margin-top-30 margin-bottom-30 min-height-500">
     <div class="row">
-      <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
+      <div class="col-md-4 col-sm-6 col-xs-12 pull-right" ng-class="(Features.length>0)?'margin-top-30-small':'';">
         <div class="topic-title">
           <span  ng-show="Features.length>0">FEATURED<span style="font-weight:900;">CARS</span></span>
         </div>
